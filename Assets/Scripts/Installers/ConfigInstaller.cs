@@ -1,5 +1,4 @@
 using Configs;
-using UI.Model;
 using UnityEngine;
 using Zenject;
 
