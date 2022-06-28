@@ -208,6 +208,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 303376520}
+  - component: {fileID: 303376521}
   m_Layer: 5
   m_Name: SnowflakesHolder
   m_TagString: Untagged
@@ -230,11 +231,24 @@ RectTransform:
   m_Father: {fileID: 1993372343}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
-  m_AnchorMin: {x: 0.5, y: 0.5}
-  m_AnchorMax: {x: 0.5, y: 0.5}
+  m_AnchorMin: {x: 0, y: 0}
+  m_AnchorMax: {x: 1, y: 1}
   m_AnchoredPosition: {x: 0, y: 0}
-  m_SizeDelta: {x: 100, y: 100}
+  m_SizeDelta: {x: 0, y: 0}
   m_Pivot: {x: 0.5, y: 0.5}
+--- !u!114 &303376521
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 303376519}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ba4a7693974c251429f2bfcd2b904e20, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  snowflakesHolder: {fileID: 0}
 --- !u!1 &389432571
 GameObject:
   m_ObjectHideFlags: 0
@@ -677,6 +691,8 @@ GameObject:
   m_Component:
   - component: {fileID: 1388896003}
   - component: {fileID: 1388896004}
+  - component: {fileID: 1388896006}
+  - component: {fileID: 1388896005}
   m_Layer: 5
   m_Name: TouchEffectPower
   m_TagString: Untagged
@@ -704,7 +720,7 @@ RectTransform:
   m_AnchorMin: {x: 0, y: 1}
   m_AnchorMax: {x: 0, y: 1}
   m_AnchoredPosition: {x: 0, y: 0}
-  m_SizeDelta: {x: 100, y: 100}
+  m_SizeDelta: {x: 450, y: 40}
   m_Pivot: {x: 0, y: 1}
 --- !u!114 &1388896004
 MonoBehaviour:
@@ -719,6 +735,44 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   slider: {fileID: 1402333174}
+--- !u!114 &1388896005
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1388896002}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fe87c0e1cc204ed48ad3b37840f39efc, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_Material: {fileID: 0}
+  m_Color: {r: 0.43234292, g: 0.17332679, b: 0.8962264, a: 1}
+  m_RaycastTarget: 1
+  m_RaycastPadding: {x: 0, y: 0, z: 0, w: 0}
+  m_Maskable: 1
+  m_OnCullStateChanged:
+    m_PersistentCalls:
+      m_Calls: []
+  m_Sprite: {fileID: 0}
+  m_Type: 0
+  m_PreserveAspect: 0
+  m_FillCenter: 1
+  m_FillMethod: 4
+  m_FillAmount: 1
+  m_FillClockwise: 1
+  m_FillOrigin: 0
+  m_UseSpriteMesh: 0
+  m_PixelsPerUnitMultiplier: 1
+--- !u!222 &1388896006
+CanvasRenderer:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1388896002}
+  m_CullTransparentMesh: 1
 --- !u!1 &1402333172
 GameObject:
   m_ObjectHideFlags: 0
@@ -956,6 +1010,7 @@ GameObject:
   - component: {fileID: 1780782702}
   - component: {fileID: 1780782701}
   - component: {fileID: 1780782700}
+  - component: {fileID: 1780782703}
   m_Layer: 0
   m_Name: SceneContext
   m_TagString: Untagged
@@ -990,6 +1045,7 @@ MonoBehaviour:
   _scriptableObjectInstallers: []
   _monoInstallers:
   - {fileID: 1780782700}
+  - {fileID: 1780782703}
   _installerPrefabs: []
   _autoRun: 1
   OnPreInstall:
@@ -1022,6 +1078,20 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 4
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &1780782703
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1780782699}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 174f612ea5e15f145a983b1be30163ff, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  snowflakePrefab: {fileID: 9149894552076224827, guid: ac52e7940d4c4394cb7f20c06714bd14, type: 3}
+  snowflakesHolder: {fileID: 303376520}
 --- !u!1 &1993372339
 GameObject:
   m_ObjectHideFlags: 0

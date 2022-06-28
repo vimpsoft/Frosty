@@ -75,3 +75,4 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   uiConfig: {fileID: 11400000, guid: 0b74233d032cac642883a3335392b169, type: 2}
+  snowflakesConfig: {fileID: 11400000, guid: 0eb26da2fcfb58b459f9007011a06227, type: 2}

@@ -1,4 +1,3 @@
-using UI.Model;
 using UI.Model.Abstractions;
 using UnityEngine;
 using UnityEngine.UI;

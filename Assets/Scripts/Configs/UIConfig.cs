@@ -8,5 +8,11 @@ namespace Configs
     {
         public float DefaultTouchForce => defaultTouchForce;
         [SerializeField] private float defaultTouchForce = 0.5f;
+        public int SnowflakesPoolWarmUpCount => snowflakesPoolWarmUpCount;
+        [SerializeField] private int snowflakesPoolWarmUpCount = 10000;
+        public float FreezingSpeed => freezingSpeed;
+        [SerializeField, Tooltip("Сколько снежинок в секунду в среднем появляется")] private float freezingSpeed = 100;
+        public float FreezingSpeedRandomness { get; }
+        [SerializeField, Tooltip("Насколько может отклоняться среднее значение количества добавленных снежинок")] private float freezingSpeedRandomness = 0.3f;
     }
 }

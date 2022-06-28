@@ -1,2 +1,2 @@
 # Frosty
-Simple frosty screen
+Simple frosty screen - test assignment for VDNKH
