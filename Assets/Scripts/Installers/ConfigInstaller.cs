@@ -1,4 +1,5 @@
 using Configs;
+using Configs.Abstractions;
 using UnityEngine;
 using Zenject;
 

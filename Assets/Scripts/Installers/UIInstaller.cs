@@ -1,4 +1,5 @@
 using UI.Model;
+using UI.Model.Abstractions;
 using Zenject;
 
 namespace Installers
@@ -7,7 +8,7 @@ namespace Installers
     {
         public override void InstallBindings()
         {
-            Container.Bind<TouchEffectPowerModel>().AsSingle();
+            Container.Bind<ITouchEffectPowerModel>().To<TouchEffectPowerModel>().AsSingle();
         }
     }
 }

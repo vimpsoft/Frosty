@@ -1,4 +1,4 @@
-﻿namespace Configs
+﻿namespace Configs.Abstractions
 {
     internal interface IUIConfig
     {

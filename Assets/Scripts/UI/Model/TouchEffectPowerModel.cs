@@ -1,11 +1,12 @@
-﻿using Configs;
+﻿using Configs.Abstractions;
 using JetBrains.Annotations;
+using UI.Model.Abstractions;
 using Zenject;
 
 namespace UI.Model
 {
     [UsedImplicitly]
-    public class TouchEffectPowerModel
+    public class TouchEffectPowerModel : ITouchEffectPowerModel
     {
         public float TouchForce { get; private set; }
 
