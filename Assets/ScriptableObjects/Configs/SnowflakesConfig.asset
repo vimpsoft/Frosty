@@ -1,0 +1,42 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 0c04e0f25c59d4c4ebdb4682734cbd56, type: 3}
+  m_Name: SnowflakesConfig
+  m_EditorClassIdentifier: 
+  snowflakeSprites:
+  - {fileID: 1288710812, guid: 2ce63a27420772f4a95f8113a25ffe09, type: 3}
+  - {fileID: -1185752858, guid: 2ce63a27420772f4a95f8113a25ffe09, type: 3}
+  - {fileID: -925522939, guid: 2ce63a27420772f4a95f8113a25ffe09, type: 3}
+  - {fileID: 965731140, guid: 2ce63a27420772f4a95f8113a25ffe09, type: 3}
+  - {fileID: -1671149172, guid: 2ce63a27420772f4a95f8113a25ffe09, type: 3}
+  - {fileID: -2117696274, guid: 2ce63a27420772f4a95f8113a25ffe09, type: 3}
+  - {fileID: 71541908, guid: 2ce63a27420772f4a95f8113a25ffe09, type: 3}
+  - {fileID: 1785090848, guid: 2ce63a27420772f4a95f8113a25ffe09, type: 3}
+  - {fileID: -2012004535, guid: 2ce63a27420772f4a95f8113a25ffe09, type: 3}
+  - {fileID: -1702231415, guid: 2ce63a27420772f4a95f8113a25ffe09, type: 3}
+  - {fileID: -529944476, guid: 2ce63a27420772f4a95f8113a25ffe09, type: 3}
+  - {fileID: -1161327461, guid: 2ce63a27420772f4a95f8113a25ffe09, type: 3}
+  - {fileID: 1357698581, guid: 2ce63a27420772f4a95f8113a25ffe09, type: 3}
+  - {fileID: 48230391, guid: 2ce63a27420772f4a95f8113a25ffe09, type: 3}
+  - {fileID: 1106781526, guid: 2ce63a27420772f4a95f8113a25ffe09, type: 3}
+  - {fileID: -1216741777, guid: 2ce63a27420772f4a95f8113a25ffe09, type: 3}
+  - {fileID: -705151914, guid: 2ce63a27420772f4a95f8113a25ffe09, type: 3}
+  - {fileID: -792416643, guid: 2ce63a27420772f4a95f8113a25ffe09, type: 3}
+  - {fileID: -1203684291, guid: 2ce63a27420772f4a95f8113a25ffe09, type: 3}
+  - {fileID: -542229817, guid: 2ce63a27420772f4a95f8113a25ffe09, type: 3}
+  - {fileID: 42527670, guid: 2ce63a27420772f4a95f8113a25ffe09, type: 3}
+  - {fileID: -935717139, guid: 2ce63a27420772f4a95f8113a25ffe09, type: 3}
+  - {fileID: 1896530502, guid: 2ce63a27420772f4a95f8113a25ffe09, type: 3}
+  - {fileID: 1464973780, guid: 2ce63a27420772f4a95f8113a25ffe09, type: 3}
+  - {fileID: 1693313204, guid: 2ce63a27420772f4a95f8113a25ffe09, type: 3}
+  - {fileID: -821712970, guid: 2ce63a27420772f4a95f8113a25ffe09, type: 3}
+  - {fileID: -1677117037, guid: 2ce63a27420772f4a95f8113a25ffe09, type: 3}
