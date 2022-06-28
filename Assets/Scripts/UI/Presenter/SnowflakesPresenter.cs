@@ -25,7 +25,7 @@ namespace UI.Presenter
             //Добавим немного случайности
             newSnowflakesCount += Mathf.RoundToInt(Random.Range(-newSnowflakesCount * uiConfig.FreezingSpeedRandomness, newSnowflakesCount * uiConfig.FreezingSpeedRandomness));
 
-            for (int i = 0; i < newSnowflakesCount; i++)
+            for (var i = 0; i < newSnowflakesCount; i++)
             {
                 snowflakesPool.Spawn();
             }

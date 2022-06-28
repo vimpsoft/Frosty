@@ -6,5 +6,6 @@
         int SnowflakesPoolWarmUpCount { get; }
         float FreezingSpeed { get; }
         float FreezingSpeedRandomness { get; }
+        float SnowflakesTweenTime { get; }
     }
 }

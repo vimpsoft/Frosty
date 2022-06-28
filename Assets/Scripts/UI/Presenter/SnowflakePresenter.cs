@@ -1,4 +1,6 @@
 using System.Collections.Generic;
+using Configs.Abstractions;
+using DG.Tweening;
 using JetBrains.Annotations;
 using UnityEngine;
 using UnityEngine.UI;
@@ -9,6 +11,8 @@ namespace UI.Presenter
 {
     public class SnowflakePresenter : MonoBehaviour
     {
+        [Inject] private readonly IUIConfig uiConfig = null;
+        
         [SerializeField] private Transform viewTransform;
         [SerializeField] private Image image;
         [SerializeField] private RectTransform selfTransform;
@@ -22,6 +26,8 @@ namespace UI.Presenter
             selfTransform.anchorMin = new Vector2(Random.Range(0f, 1f), Random.Range(0f, 1f));
             selfTransform.anchorMax = new Vector2(Random.Range(0f, 1f), Random.Range(0f, 1f));
             selfTransform.anchoredPosition = Vector2.zero;
+
+            DOVirtual.Color(Color.clear, Color.white, uiConfig.SnowflakesTweenTime, value => image.color = value);
         }
         
         [UsedImplicitly]
