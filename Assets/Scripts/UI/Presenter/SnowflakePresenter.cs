@@ -1,3 +1,4 @@
+using System;
 using System.Collections.Generic;
 using Configs.Abstractions;
 using DG.Tweening;
@@ -17,6 +18,8 @@ namespace UI.Presenter
         [SerializeField] private Image image;
         [SerializeField] private RectTransform selfTransform;
 
+        private Tween currentTween;
+
         private void Init(Sprite sprite)
         {
             image.sprite = sprite;
@@ -25,9 +28,8 @@ namespace UI.Presenter
 
             selfTransform.anchorMin = new Vector2(Random.Range(0f, 1f), Random.Range(0f, 1f));
             selfTransform.anchorMax = new Vector2(Random.Range(0f, 1f), Random.Range(0f, 1f));
-            selfTransform.anchoredPosition = Vector2.zero;
 
-            DOVirtual.Color(Color.clear, Color.white, uiConfig.SnowflakesTweenTime, value => image.color = value);
+            currentTween = DOVirtual.Color(Color.clear, Color.white, uiConfig.SnowflakesTweenTime, value => image.color = value);
         }
         
         [UsedImplicitly]
@@ -46,6 +48,24 @@ namespace UI.Presenter
                 
                 item.Init(availableSprites[Random.Range(0, availableSprites.Count)]);
             }
+        }
+
+        public void Hide(Action onComplete)
+        {
+            if (currentTween != null)
+            {
+                currentTween.Kill();
+            }
+            var randomDelay = Random.Range(0f, 0.25f);
+            var initialColor = image.color;
+            currentTween = DOVirtual.Color(initialColor, Color.clear, uiConfig.SnowflakesTweenTime,
+                    value => image.color = value)
+                .SetDelay(randomDelay)
+                .OnComplete(() =>
+                {
+                    currentTween = null;
+                    onComplete();
+                });
         }
     }
 }

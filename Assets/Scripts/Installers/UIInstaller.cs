@@ -9,6 +9,7 @@ namespace Installers
         public override void InstallBindings()
         {
             Container.Bind<ITouchEffectPowerModel>().To<TouchEffectPowerModel>().AsSingle();
+            Container.Bind<ISnowflakesModel>().To<SnowflakesModel>().AsSingle();
         }
     }
 }
