@@ -56,7 +56,7 @@ namespace UI.Presenter
             {
                 currentTween.Kill();
             }
-            var randomDelay = Random.Range(0f, 0.25f);
+            var randomDelay = Random.Range(0f, 1f); //Оптимизация, чтобы не все объекты сразу дестроились и не было сразу одного большого спайка
             var initialColor = image.color;
             currentTween = DOVirtual.Color(initialColor, Color.clear, uiConfig.SnowflakesTweenTime,
                     value => image.color = value)
