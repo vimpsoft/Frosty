@@ -11,9 +11,7 @@ namespace Configs
         public int SnowflakesPoolWarmUpCount => snowflakesPoolWarmUpCount;
         [SerializeField] private int snowflakesPoolWarmUpCount = 10000;
         public float FreezingSpeed => freezingSpeed;
-        [SerializeField, Tooltip("Сколько снежинок в секунду в среднем появляется")] private float freezingSpeed = 100;
-        public float FreezingSpeedRandomness => freezingSpeedRandomness;
-        [SerializeField, Tooltip("Насколько может отклоняться среднее значение количества добавленных снежинок")] private float freezingSpeedRandomness = 0.3f;
+        [SerializeField, Tooltip("Сколько снежинок в кадр появляется")] private float freezingSpeed = 1;
         public float SnowflakesTweenTime => snowflakesTweenTime;
         [SerializeField, Tooltip("Время появления/исчезновения снежинки")] private float snowflakesTweenTime = 0.75f;
     }

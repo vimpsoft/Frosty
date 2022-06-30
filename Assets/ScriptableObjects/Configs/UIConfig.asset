@@ -14,4 +14,5 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   defaultTouchForce: 0.5
   snowflakesPoolWarmUpCount: 10000
-  freezingSpeed: 100
+  freezingSpeed: 1
+  snowflakesTweenTime: 0.75

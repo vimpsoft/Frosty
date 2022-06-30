@@ -24,30 +24,12 @@ namespace UI.Presenter
         {
             image.sprite = sprite;
             viewTransform.Rotate(Vector3.forward, Random.Range(0f, 360f));
-            viewTransform.localScale = Vector3.one * Mathf.Cos(Mathf.PI / 2f * Random.Range(0f, 1f));
+            viewTransform.localScale = Vector3.one * Mathf.Sin(Mathf.PI / 4f + Mathf.PI / 2f * Random.Range(0f, 1f));
 
             selfTransform.anchorMin = new Vector2(Random.Range(0f, 1f), Random.Range(0f, 1f));
             selfTransform.anchorMax = new Vector2(Random.Range(0f, 1f), Random.Range(0f, 1f));
 
             currentTween = DOVirtual.Color(Color.clear, Color.white, uiConfig.SnowflakesTweenTime, value => image.color = value);
-        }
-        
-        [UsedImplicitly]
-        public class Pool : MonoMemoryPool<SnowflakePresenter>
-        {
-            private readonly IReadOnlyList<Sprite> availableSprites;
-            
-            public Pool(IReadOnlyList<Sprite> availableSprites)
-            {
-                this.availableSprites = availableSprites;
-            }
-
-            protected override void OnSpawned(SnowflakePresenter item)
-            {
-                base.OnSpawned(item);
-                
-                item.Init(availableSprites[Random.Range(0, availableSprites.Count)]);
-            }
         }
 
         public void Hide(Action onComplete)
@@ -66,6 +48,19 @@ namespace UI.Presenter
                     currentTween = null;
                     onComplete();
                 });
+        }
+        
+        [UsedImplicitly]
+        public class Pool : MonoMemoryPool<SnowflakePresenter>
+        {
+            [Inject] private readonly IReadOnlyList<Sprite> availableSprites = null;
+
+            protected override void OnSpawned(SnowflakePresenter item)
+            {
+                base.OnSpawned(item);
+                
+                item.Init(availableSprites[Random.Range(0, availableSprites.Count)]);
+            }
         }
     }
 }
